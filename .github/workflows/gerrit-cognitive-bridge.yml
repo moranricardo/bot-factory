@@ -2,8 +2,7 @@ name: "Ra Pulse: Puente Cognitivo en la Nube"
 
 on:
   push:
-    paths:
-      - 'data/gerrit_payload.json'
+    branches: [ main ]
 
 jobs:
   analyze-gerrit:
