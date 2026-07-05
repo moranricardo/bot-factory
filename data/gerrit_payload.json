@@ -1,205 +1,5 @@
 [
   {
-    "id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_graphics~493293",
-    "triplet_id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_graphics~lineage-23.2~I638bbc86618096f102df6273a129c0a7cc08d9a9",
-    "project": "LineageOS/android_hardware_samsung_slsi-linaro_graphics",
-    "branch": "lineage-23.2",
-    "attention_set": {
-      "35850": {
-        "account": {
-          "_account_id": 35850
-        },
-        "last_update": "2026-07-05 12:30:40.000000000",
-        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
-        "reason_account": {
-          "_account_id": 36705
-        }
-      }
-    },
-    "removed_from_attention_set": {},
-    "hashtags": [],
-    "change_id": "I638bbc86618096f102df6273a129c0a7cc08d9a9",
-    "subject": "libhwc2.1: s5e8825/s5e9925: Set DECON_WIN_STATE_FINGERPRINT",
-    "status": "NEW",
-    "created": "2026-07-05 12:12:33.000000000",
-    "updated": "2026-07-05 12:30:40.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 6,
-    "deletions": 0,
-    "total_comment_count": 0,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "fa326b05f49c4b27b002a6b17a491e9e8d1d4475",
-    "_number": 493293,
-    "virtual_id_number": 493293,
-    "owner": {
-      "_account_id": 35850
-    },
-    "current_revision_number": 3,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "OK",
-            "applied_by": {
-              "_account_id": 36705
-            }
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
-          },
-          {
-            "label": "CI",
-            "status": "MAY"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_graphics~493292",
-    "triplet_id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_graphics~lineage-23.2~I7a4144ce85d5dc2cf32c8c7f2e413a2da58e3717",
-    "project": "LineageOS/android_hardware_samsung_slsi-linaro_graphics",
-    "branch": "lineage-23.2",
-    "attention_set": {
-      "35850": {
-        "account": {
-          "_account_id": 35850
-        },
-        "last_update": "2026-07-05 12:29:43.000000000",
-        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
-        "reason_account": {
-          "_account_id": 36705
-        }
-      }
-    },
-    "removed_from_attention_set": {
-      "36705": {
-        "account": {
-          "_account_id": 36705
-        },
-        "last_update": "2026-07-05 12:29:43.000000000",
-        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
-        "reason_account": {
-          "_account_id": 36705
-        }
-      }
-    },
-    "hashtags": [],
-    "change_id": "I7a4144ce85d5dc2cf32c8c7f2e413a2da58e3717",
-    "subject": "libhwc2.1: Implement UDFPS mask layer logic for DRM",
-    "status": "NEW",
-    "created": "2026-07-05 12:09:49.000000000",
-    "updated": "2026-07-05 12:29:43.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 60,
-    "deletions": 4,
-    "total_comment_count": 1,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "1044cc751e77ec140a5d9c65a5a1fd33cc4d4536",
-    "_number": 493292,
-    "virtual_id_number": 493292,
-    "owner": {
-      "_account_id": 35850
-    },
-    "current_revision_number": 3,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "OK",
-            "applied_by": {
-              "_account_id": 36705
-            }
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
-          },
-          {
-            "label": "CI",
-            "status": "MAY"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_device_oneplus_lexus~493291",
-    "triplet_id": "LineageOS%2Fandroid_device_oneplus_lexus~lineage-23.2~If76e8acae7f039f597b8fcbab232b763ecdf8281",
-    "project": "LineageOS/android_device_oneplus_lexus",
-    "branch": "lineage-23.2",
-    "attention_set": {
-      "10067": {
-        "account": {
-          "_account_id": 10067
-        },
-        "last_update": "2026-07-05 11:52:00.000000000",
-        "reason": "<GERRIT_ACCOUNT_35436> replied on the change",
-        "reason_account": {
-          "_account_id": 35436
-        }
-      }
-    },
-    "removed_from_attention_set": {},
-    "hashtags": [],
-    "change_id": "If76e8acae7f039f597b8fcbab232b763ecdf8281",
-    "subject": "lexus: De-blob vendor.oplus.hardware.display.MixLut3D V1",
-    "status": "NEW",
-    "created": "2026-07-05 11:50:53.000000000",
-    "updated": "2026-07-05 11:52:00.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 0,
-    "deletions": 1,
-    "total_comment_count": 0,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "7803b47a9288044330ad869c60abc852106d781a",
-    "_number": 493291,
-    "virtual_id_number": 493291,
-    "owner": {
-      "_account_id": 35436
-    },
-    "current_revision_number": 2,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "OK",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "OK",
-            "applied_by": {
-              "_account_id": 35436
-            }
-          },
-          {
-            "label": "Code-Review",
-            "status": "OK",
-            "applied_by": {
-              "_account_id": 35436
-            }
-          },
-          {
-            "label": "CI",
-            "status": "MAY"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "LineageOS%2Fandroid_hardware_oplus~491129",
     "triplet_id": "LineageOS%2Fandroid_hardware_oplus~lineage-23.2~I39daf0622751a02d880232504a14b154b1cd1c45",
     "project": "LineageOS/android_hardware_oplus",
@@ -235,14 +35,14 @@
     "subject": "interfaces: Introduce vendor.oplus.hardware.display.MixLut3D V1",
     "status": "NEW",
     "created": "2026-06-20 23:40:00.000000000",
-    "updated": "2026-07-05 11:34:50.000000000",
+    "updated": "2026-07-05 13:00:57.000000000",
     "submit_type": "REBASE_IF_NECESSARY",
     "insertions": 106,
     "deletions": 0,
-    "total_comment_count": 1,
+    "total_comment_count": 2,
     "unresolved_comment_count": 0,
     "has_review_started": true,
-    "meta_rev_id": "6b90142162373251df294800bceedf8ee78f56fd",
+    "meta_rev_id": "335543b9b14c4c6d25c1db0916641de1ff3f2d3d",
     "_number": 491129,
     "virtual_id_number": 491129,
     "owner": {
@@ -281,30 +81,29 @@
     ]
   },
   {
-    "id": "LineageOS%2Fandroid_device_oneplus_avalon~493290",
-    "triplet_id": "LineageOS%2Fandroid_device_oneplus_avalon~lineage-23.2~I52c4d08235311ec91d59a6816f323c171b1c19fd",
-    "project": "LineageOS/android_device_oneplus_avalon",
+    "id": "LineageOS%2Fandroid_device_sony_pdx257~493294",
+    "triplet_id": "LineageOS%2Fandroid_device_sony_pdx257~lineage-23.2~I6cb9b69eba1e2e06c5cfe7224bcad2c96c9e6498",
+    "project": "LineageOS/android_device_sony_pdx257",
     "branch": "lineage-23.2",
     "hashtags": [],
-    "change_id": "I52c4d08235311ec91d59a6816f323c171b1c19fd",
-    "subject": "avalon: De-blob MixLut3D interface",
+    "change_id": "I6cb9b69eba1e2e06c5cfe7224bcad2c96c9e6498",
+    "subject": "pdx257: Include soong namespaces for NXP keymint3 and weaver HALs",
     "status": "NEW",
-    "created": "2026-07-05 11:27:42.000000000",
-    "updated": "2026-07-05 11:27:42.000000000",
+    "created": "2026-07-05 12:53:48.000000000",
+    "updated": "2026-07-05 12:53:48.000000000",
     "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 0,
-    "deletions": 1,
+    "insertions": 4,
+    "deletions": 0,
     "total_comment_count": 0,
     "unresolved_comment_count": 0,
     "has_review_started": true,
-    "meta_rev_id": "eeabb8b7796d70ec3047ac055271ee623591975b",
-    "_number": 493290,
-    "virtual_id_number": 493290,
+    "meta_rev_id": "aa6bc0545e69b099bc8d9ac92135b0cb62fc139e",
+    "_number": 493294,
+    "virtual_id_number": 493294,
     "owner": {
-      "_account_id": 35825
+      "_account_id": 10067
     },
     "current_revision_number": 1,
-    "_more_changes": true,
     "requirements": [],
     "submit_records": [
       {
@@ -322,6 +121,257 @@
           {
             "label": "CI",
             "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_codec2~469881",
+    "triplet_id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_codec2~lineage-23.2~I79e3aa590c8a6225eb79749423bed1d7bb632753",
+    "project": "LineageOS/android_hardware_samsung_slsi-linaro_codec2",
+    "branch": "lineage-23.2",
+    "attention_set": {
+      "13648": {
+        "account": {
+          "_account_id": 13648
+        },
+        "last_update": "2026-07-04 14:07:56.000000000",
+        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
+        "reason_account": {
+          "_account_id": 35850
+        }
+      },
+      "24387": {
+        "account": {
+          "_account_id": 24387
+        },
+        "last_update": "2026-07-04 14:07:56.000000000",
+        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
+        "reason_account": {
+          "_account_id": 35850
+        }
+      },
+      "33569": {
+        "account": {
+          "_account_id": 33569
+        },
+        "last_update": "2026-01-25 21:40:22.000000000",
+        "reason": "<GERRIT_ACCOUNT_13648> replied on the change",
+        "reason_account": {
+          "_account_id": 13648
+        }
+      },
+      "34219": {
+        "account": {
+          "_account_id": 34219
+        },
+        "last_update": "2026-07-04 11:52:00.000000000",
+        "reason": "<GERRIT_ACCOUNT_24387> replied on the change",
+        "reason_account": {
+          "_account_id": 24387
+        }
+      }
+    },
+    "removed_from_attention_set": {
+      "35850": {
+        "account": {
+          "_account_id": 35850
+        },
+        "last_update": "2026-07-05 12:44:29.000000000",
+        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
+        "reason_account": {
+          "_account_id": 35850
+        }
+      }
+    },
+    "hashtags": [],
+    "change_id": "I79e3aa590c8a6225eb79749423bed1d7bb632753",
+    "subject": "codec2: Convert to AIDL",
+    "status": "NEW",
+    "created": "2026-01-25 20:28:10.000000000",
+    "updated": "2026-07-05 12:48:17.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 62,
+    "deletions": 75,
+    "total_comment_count": 15,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "1c24d1a7d6398560f1d436ba3a05b56e8d8b324c",
+    "_number": 469881,
+    "virtual_id_number": 469881,
+    "owner": {
+      "_account_id": 33569
+    },
+    "current_revision_number": 9,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_hardware_sony~492957",
+    "triplet_id": "LineageOS%2Fandroid_hardware_sony~lineage-23.2~I455eff7643251973d84d38343ce33182613e02fe",
+    "project": "LineageOS/android_hardware_sony",
+    "branch": "lineage-23.2",
+    "topic": "CP2A",
+    "attention_set": {
+      "10067": {
+        "account": {
+          "_account_id": 10067
+        },
+        "last_update": "2026-07-05 12:40:34.000000000",
+        "reason": "Someone else replied on the change"
+      },
+      "14962": {
+        "account": {
+          "_account_id": 14962
+        },
+        "last_update": "2026-07-03 08:39:27.000000000",
+        "reason": "Someone else replied on the change"
+      }
+    },
+    "removed_from_attention_set": {
+      "33039": {
+        "account": {
+          "_account_id": 33039
+        },
+        "last_update": "2026-07-05 12:43:35.000000000",
+        "reason": "removed on reply"
+      }
+    },
+    "hashtags": [],
+    "change_id": "I455eff7643251973d84d38343ce33182613e02fe",
+    "subject": "sepolicy: Nuke sony_euiccmemoryreset_app sepolicy",
+    "status": "NEW",
+    "created": "2026-07-03 08:38:50.000000000",
+    "updated": "2026-07-05 12:43:35.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 2,
+    "deletions": 6,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "9cfd5dec85f77b23b6969c2abcc428265b3f2118",
+    "_number": 492957,
+    "virtual_id_number": 492957,
+    "owner": {
+      "_account_id": 14962
+    },
+    "current_revision_number": 3,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY",
+            "applied_by": {
+              "_account_id": 33039
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_hardware_sony~492602",
+    "triplet_id": "LineageOS%2Fandroid_hardware_sony~lineage-23.2~I4457efe83f0880b4188b541c9cc7cecd7e1d7b66",
+    "project": "LineageOS/android_hardware_sony",
+    "branch": "lineage-23.2",
+    "topic": "CP2A",
+    "attention_set": {
+      "10067": {
+        "account": {
+          "_account_id": 10067
+        },
+        "last_update": "2026-07-05 12:40:35.000000000",
+        "reason": "Someone else replied on the change"
+      },
+      "20370": {
+        "account": {
+          "_account_id": 20370
+        },
+        "last_update": "2026-06-30 18:32:09.000000000",
+        "reason": "Someone else replied on the change"
+      }
+    },
+    "removed_from_attention_set": {
+      "33039": {
+        "account": {
+          "_account_id": 33039
+        },
+        "last_update": "2026-07-05 12:43:33.000000000",
+        "reason": "removed on reply"
+      }
+    },
+    "hashtags": [],
+    "change_id": "I4457efe83f0880b4188b541c9cc7cecd7e1d7b66",
+    "subject": "sepolicy: Rename 202404 compatibility mapping to 202504",
+    "status": "NEW",
+    "created": "2026-06-30 18:31:26.000000000",
+    "updated": "2026-07-05 12:43:33.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 0,
+    "deletions": 0,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "cbbd21957995fa1d9be959f3862da0afdc8c337a",
+    "_number": 492602,
+    "virtual_id_number": 492602,
+    "owner": {
+      "_account_id": 20370
+    },
+    "current_revision_number": 3,
+    "_more_changes": true,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY",
+            "applied_by": {
+              "_account_id": 33039
+            }
           }
         ]
       }
