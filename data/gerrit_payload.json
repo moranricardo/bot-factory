@@ -4,19 +4,32 @@
     "triplet_id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_graphics~lineage-23.2~I638bbc86618096f102df6273a129c0a7cc08d9a9",
     "project": "LineageOS/android_hardware_samsung_slsi-linaro_graphics",
     "branch": "lineage-23.2",
+    "attention_set": {
+      "35850": {
+        "account": {
+          "_account_id": 35850
+        },
+        "last_update": "2026-07-05 12:30:40.000000000",
+        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
+        "reason_account": {
+          "_account_id": 36705
+        }
+      }
+    },
+    "removed_from_attention_set": {},
     "hashtags": [],
     "change_id": "I638bbc86618096f102df6273a129c0a7cc08d9a9",
     "subject": "libhwc2.1: s5e8825/s5e9925: Set DECON_WIN_STATE_FINGERPRINT",
     "status": "NEW",
     "created": "2026-07-05 12:12:33.000000000",
-    "updated": "2026-07-05 12:24:08.000000000",
+    "updated": "2026-07-05 12:30:40.000000000",
     "submit_type": "REBASE_IF_NECESSARY",
     "insertions": 6,
     "deletions": 0,
     "total_comment_count": 0,
     "unresolved_comment_count": 0,
     "has_review_started": true,
-    "meta_rev_id": "f8a72517bf5cf44422fbe0f01a5be23e65361666",
+    "meta_rev_id": "fa326b05f49c4b27b002a6b17a491e9e8d1d4475",
     "_number": 493293,
     "virtual_id_number": 493293,
     "owner": {
@@ -31,7 +44,10 @@
         "labels": [
           {
             "label": "Verified",
-            "status": "NEED"
+            "status": "OK",
+            "applied_by": {
+              "_account_id": 36705
+            }
           },
           {
             "label": "Code-Review",
@@ -51,31 +67,42 @@
     "project": "LineageOS/android_hardware_samsung_slsi-linaro_graphics",
     "branch": "lineage-23.2",
     "attention_set": {
+      "35850": {
+        "account": {
+          "_account_id": 35850
+        },
+        "last_update": "2026-07-05 12:29:43.000000000",
+        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
+        "reason_account": {
+          "_account_id": 36705
+        }
+      }
+    },
+    "removed_from_attention_set": {
       "36705": {
         "account": {
           "_account_id": 36705
         },
-        "last_update": "2026-07-05 12:14:23.000000000",
-        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
+        "last_update": "2026-07-05 12:29:43.000000000",
+        "reason": "<GERRIT_ACCOUNT_36705> replied on the change",
         "reason_account": {
-          "_account_id": 35850
+          "_account_id": 36705
         }
       }
     },
-    "removed_from_attention_set": {},
     "hashtags": [],
     "change_id": "I7a4144ce85d5dc2cf32c8c7f2e413a2da58e3717",
     "subject": "libhwc2.1: Implement UDFPS mask layer logic for DRM",
     "status": "NEW",
     "created": "2026-07-05 12:09:49.000000000",
-    "updated": "2026-07-05 12:24:08.000000000",
+    "updated": "2026-07-05 12:29:43.000000000",
     "submit_type": "REBASE_IF_NECESSARY",
     "insertions": 60,
     "deletions": 4,
-    "total_comment_count": 0,
+    "total_comment_count": 1,
     "unresolved_comment_count": 0,
     "has_review_started": true,
-    "meta_rev_id": "42faf98920b86c36d9d9a95c102b8f0908fbfa80",
+    "meta_rev_id": "1044cc751e77ec140a5d9c65a5a1fd33cc4d4536",
     "_number": 493292,
     "virtual_id_number": 493292,
     "owner": {
@@ -90,7 +117,10 @@
         "labels": [
           {
             "label": "Verified",
-            "status": "NEED"
+            "status": "OK",
+            "applied_by": {
+              "_account_id": 36705
+            }
           },
           {
             "label": "Code-Review",
