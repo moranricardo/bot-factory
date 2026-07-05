@@ -8,50 +8,51 @@ on:
 jobs:
   analyze-gerrit:
     runs-on: ubuntu-latest
+
     steps:
-    - name: 1. Descargar el Repositorio
-      uses: actions/checkout@v4
+      - name: 1. Descargar el Repositorio
+        uses: actions/checkout@v4
 
-    - name: 2. Configurar Entorno de Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
+      - name: 2. Configurar Entorno de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
 
-    - name: 3. Instalar Dependencias de IA de Google
-      run: |
-        pip install google-generativeai
+      - name: 3. Instalar Dependencias de IA de Google
+        run: |
+          pip install google-generativeai
 
-    - name: 4. Interrogar Puente Cognitivo (Gemini)
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: |
-        python -c "
-import os
-import json
-import google.generativeai as genai
+      - name: 4. Interrogar Puente Cognitivo (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -c "
+          import os
+          import json
+          import google.generativeai as genai
 
-if 'GEMINI_API_KEY' not in os.environ:
-    print('❌ Error: Falta la clave secreta GEMINI_API_KEY en GitHub Secrets')
-    exit(1)
+          if 'GEMINI_API_KEY' not in os.environ:
+              print('❌ Error: Falta la clave secreta GEMINI_API_KEY en GitHub Secrets')
+              exit(1)
 
-genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-model = genai.GenerativeModel('gemini-1.5-pro')
+          genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+          model = genai.GenerativeModel('gemini-1.5-pro')
 
-json_path = 'data/gerrit_payload.json'
-with open(json_path, 'r') as f:
-    gerrit_data = json.load(f)
+          json_path = 'data/gerrit_payload.json'
+          with open(json_path, 'r') as f:
+              gerrit_data = json.load(f)
 
-contexto = json.dumps(gerrit_data[:2], indent=2)
-prompt = f'''Eres el núcleo cognitivo del proyecto Ra Pulse.
-Analiza la siguiente telemetría de cambios extraídos del Gerrit de LineageOS.
-Identifica parches críticos de seguridad o actualizaciones relevantes y genera una recomendación estructurada de ingeniería:
+          contexto = json.dumps(gerrit_data[:2], indent=2)
+          prompt = f'''Eres el núcleo cognitivo del proyecto Ra Pulse.
+          Analiza la siguiente telemetría de cambios extraídos del Gerrit de LineageOS.
+          Identifica parches críticos de seguridad o actualizaciones relevantes y genera una recomendación estructurada de ingeniería:
 
-{contexto}
-'''
+          {contexto}
+          '''
 
-print('🤖 Enviando contexto a Gemini en la Nube...')
-response = model.generate_content(prompt)
-print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
-print(response.text)
-        "
+          print('🤖 Enviando contexto a Gemini en la Nube...')
+          response = model.generate_content(prompt)
+          print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
+          print(response.text)
+          "
