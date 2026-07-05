@@ -1,0 +1,270 @@
+[
+  {
+    "id": "LineageOS%2Fandroid_packages_apps_Launcher3~489879",
+    "triplet_id": "LineageOS%2Fandroid_packages_apps_Launcher3~lineage-23.2~I75862eb933d9e1a1ea01aab2c6d39f8eca37fe51",
+    "project": "LineageOS/android_packages_apps_Launcher3",
+    "branch": "lineage-23.2",
+    "attention_set": {
+      "28223": {
+        "account": {
+          "_account_id": 28223
+        },
+        "last_update": "2026-06-17 12:25:56.000000000",
+        "reason": "<GERRIT_ACCOUNT_37317> replied on the change",
+        "reason_account": {
+          "_account_id": 37317
+        }
+      }
+    },
+    "removed_from_attention_set": {
+      "2165": {
+        "account": {
+          "_account_id": 2165
+        },
+        "last_update": "2026-06-25 00:25:02.000000000",
+        "reason": "<GERRIT_ACCOUNT_37317> replied on the change",
+        "reason_account": {
+          "_account_id": 37317
+        }
+      },
+      "29242": {
+        "account": {
+          "_account_id": 29242
+        },
+        "last_update": "2026-07-05 01:23:31.000000000",
+        "reason": "<GERRIT_ACCOUNT_29242> replied on the change",
+        "reason_account": {
+          "_account_id": 29242
+        }
+      }
+    },
+    "hashtags": [],
+    "change_id": "I75862eb933d9e1a1ea01aab2c6d39f8eca37fe51",
+    "subject": "Launcher3: Launch first app from search results on Enter",
+    "status": "NEW",
+    "created": "2026-06-15 14:23:05.000000000",
+    "updated": "2026-07-05 01:23:31.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 19,
+    "deletions": 1,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "997d03a8ecd7a2dbd565de91e59766cb2dad4dfb",
+    "_number": 489879,
+    "virtual_id_number": 489879,
+    "owner": {
+      "_account_id": 37317
+    },
+    "current_revision_number": 1,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "OK",
+            "applied_by": {
+              "_account_id": 37317
+            }
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_packages_apps_Launcher3~493267",
+    "triplet_id": "LineageOS%2Fandroid_packages_apps_Launcher3~lineage-24.0~I554c005d5e523aca0842c78a353686e86af1a7f2",
+    "project": "LineageOS/android_packages_apps_Launcher3",
+    "branch": "lineage-24.0",
+    "hashtags": [],
+    "change_id": "I554c005d5e523aca0842c78a353686e86af1a7f2",
+    "subject": "Launcher3: Double tap on home screen to turn off screen",
+    "status": "NEW",
+    "created": "2026-07-04 23:04:07.000000000",
+    "updated": "2026-07-04 23:05:20.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 42,
+    "deletions": 0,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "4b8f13d8b1918594c1eb5ed69010494b69ff016b",
+    "_number": 493267,
+    "virtual_id_number": 493267,
+    "owner": {
+      "_account_id": 13648
+    },
+    "current_revision_number": 2,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_packages_apps_Launcher3~493266",
+    "triplet_id": "LineageOS%2Fandroid_packages_apps_Launcher3~lineage-24.0~I14327b5627d2cf9fcad9fff397e588810cea4b08",
+    "project": "LineageOS/android_packages_apps_Launcher3",
+    "branch": "lineage-24.0",
+    "hashtags": [],
+    "change_id": "I14327b5627d2cf9fcad9fff397e588810cea4b08",
+    "subject": "Launcher3: Add permission for contextual search",
+    "status": "NEW",
+    "created": "2026-07-04 23:04:07.000000000",
+    "updated": "2026-07-04 23:04:07.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 44,
+    "deletions": 3,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "6e05a10d481ad60bd9637b5decf8354912cb377c",
+    "_number": 493266,
+    "virtual_id_number": 493266,
+    "owner": {
+      "_account_id": 13648
+    },
+    "current_revision_number": 1,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_packages_apps_Launcher3~493265",
+    "triplet_id": "LineageOS%2Fandroid_packages_apps_Launcher3~lineage-24.0~I10c35407820373a1d5f84b237ac449398e076dcd",
+    "project": "LineageOS/android_packages_apps_Launcher3",
+    "branch": "lineage-24.0",
+    "hashtags": [],
+    "change_id": "I10c35407820373a1d5f84b237ac449398e076dcd",
+    "subject": "Launcher3: implement hidden & protected apps",
+    "status": "NEW",
+    "created": "2026-07-04 23:04:07.000000000",
+    "updated": "2026-07-04 23:04:07.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 1582,
+    "deletions": 4,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "fa0ed36b05512e22979957b033fb802ed02a4e7a",
+    "_number": 493265,
+    "virtual_id_number": 493265,
+    "owner": {
+      "_account_id": 13648
+    },
+    "current_revision_number": 1,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_packages_apps_Launcher3~493264",
+    "triplet_id": "LineageOS%2Fandroid_packages_apps_Launcher3~lineage-24.0~I503e19cbc512eac0e4a8c8bccc16a6ccc0e805da",
+    "project": "LineageOS/android_packages_apps_Launcher3",
+    "branch": "lineage-24.0",
+    "hashtags": [],
+    "change_id": "I503e19cbc512eac0e4a8c8bccc16a6ccc0e805da",
+    "subject": "Launcher3: allow disabling workspace edit",
+    "status": "NEW",
+    "created": "2026-07-04 23:04:07.000000000",
+    "updated": "2026-07-04 23:04:07.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 40,
+    "deletions": 4,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "ced215e190133942a9e8e5015394a8a860d9848c",
+    "_number": 493264,
+    "virtual_id_number": 493264,
+    "owner": {
+      "_account_id": 13648
+    },
+    "current_revision_number": 1,
+    "_more_changes": true,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  }
+]
