@@ -17,9 +17,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 3. Instalar Dependencias de IA de Google
+      - name: 3. Instalar Dependencias Actualizadas de Google
         run: |
-          pip install google-generativeai
+          pip install google-genai
 
       - name: 4. Interrogar Puente Cognitivo (Gemini)
         env:
@@ -28,14 +28,13 @@ jobs:
           python -c "
           import os
           import json
-          import google.generativeai as genai
+          from google import genai
 
-          if 'GEMINI_API_KEY' not in os.environ:
-              print('❌ Error: Falta la clave secreta GEMINI_API_KEY en GitHub Secrets')
+          if 'GEMINI_API_KEY' not in os.environ or not os.environ['GEMINI_API_KEY']:
+              print('❌ Error: La clave secreta GEMINI_API_KEY llego vacia al contenedor.')
               exit(1)
 
-          genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-          model = genai.GenerativeModel('gemini-1.5-pro')
+          client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
 
           json_path = 'data/gerrit_payload.json'
           with open(json_path, 'r') as f:
@@ -49,8 +48,11 @@ jobs:
           {contexto}
           '''
 
-          print('🤖 Enviando contexto a Gemini en la Nube...')
-          response = model.generate_content(prompt)
+          print('🤖 Enviando contexto a Gemini...')
+          response = client.models.generate_content(
+              model='gemini-1.5-pro',
+              contents=prompt,
+          )
           print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
           print(response.text)
           "
