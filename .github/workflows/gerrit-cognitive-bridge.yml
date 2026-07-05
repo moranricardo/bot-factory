@@ -50,7 +50,7 @@ jobs:
 
           print('🤖 Enviando contexto a Gemini...')
           response = client.models.generate_content(
-              model='gemini-1.5-pro',
+              model='gemini-2.5-flash',
               contents=prompt,
           )
           print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
