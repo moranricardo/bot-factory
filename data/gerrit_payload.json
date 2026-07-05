@@ -1,5 +1,110 @@
 [
   {
+    "id": "LineageOS%2Flineage_wiki~493297",
+    "triplet_id": "LineageOS%2Flineage_wiki~main~I7da021204412648110d24038156ab8457c0f5266",
+    "project": "LineageOS/lineage_wiki",
+    "branch": "main",
+    "attention_set": {
+      "10067": {
+        "account": {
+          "_account_id": 10067
+        },
+        "last_update": "2026-07-05 14:24:37.000000000",
+        "reason": "Someone else replied on the change"
+      }
+    },
+    "removed_from_attention_set": {},
+    "hashtags": [],
+    "change_id": "I7da021204412648110d24038156ab8457c0f5266",
+    "subject": "wiki: Update keys list for 17",
+    "status": "NEW",
+    "created": "2026-07-05 14:22:39.000000000",
+    "updated": "2026-07-05 14:24:37.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 5,
+    "deletions": 0,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "df45bdb76479c0129e25a293fa7dbb0a86b1a3ff",
+    "_number": 493297,
+    "virtual_id_number": 493297,
+    "owner": {
+      "_account_id": 10067
+    },
+    "current_revision_number": 1,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY",
+            "applied_by": {
+              "_account_id": 33137
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LineageOS%2Fandroid_device_sony_sm8550-common~493296",
+    "triplet_id": "LineageOS%2Fandroid_device_sony_sm8550-common~lineage-23.2~Id106fd035414720fd43be142ea86268d7ed035db",
+    "project": "LineageOS/android_device_sony_sm8550-common",
+    "branch": "lineage-23.2",
+    "hashtags": [],
+    "change_id": "Id106fd035414720fd43be142ea86268d7ed035db",
+    "subject": "sm8550-common: Use libcrypto-v33 for nv_updater",
+    "status": "NEW",
+    "created": "2026-07-05 14:22:01.000000000",
+    "updated": "2026-07-05 14:22:01.000000000",
+    "submit_type": "REBASE_IF_NECESSARY",
+    "insertions": 2,
+    "deletions": 0,
+    "total_comment_count": 0,
+    "unresolved_comment_count": 0,
+    "has_review_started": true,
+    "meta_rev_id": "00ccf9c2bb1e87b7a350e63f086555e6e198c3d2",
+    "_number": 493296,
+    "virtual_id_number": 493296,
+    "owner": {
+      "_account_id": 31578
+    },
+    "current_revision_number": 1,
+    "requirements": [],
+    "submit_records": [
+      {
+        "rule_name": "gerrit~DefaultSubmitRule",
+        "status": "NOT_READY",
+        "labels": [
+          {
+            "label": "Verified",
+            "status": "NEED"
+          },
+          {
+            "label": "Code-Review",
+            "status": "NEED"
+          },
+          {
+            "label": "CI",
+            "status": "MAY"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "LineageOS%2Fandroid_hardware_oplus~491129",
     "triplet_id": "LineageOS%2Fandroid_hardware_oplus~lineage-23.2~I39daf0622751a02d880232504a14b154b1cd1c45",
     "project": "LineageOS/android_hardware_oplus",
@@ -68,303 +173,6 @@
             "applied_by": {
               "_account_id": 10067
             }
-          },
-          {
-            "label": "CI",
-            "status": "MAY",
-            "applied_by": {
-              "_account_id": 33039
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_device_sony_pdx257~493294",
-    "triplet_id": "LineageOS%2Fandroid_device_sony_pdx257~lineage-23.2~I6cb9b69eba1e2e06c5cfe7224bcad2c96c9e6498",
-    "project": "LineageOS/android_device_sony_pdx257",
-    "branch": "lineage-23.2",
-    "hashtags": [],
-    "change_id": "I6cb9b69eba1e2e06c5cfe7224bcad2c96c9e6498",
-    "subject": "pdx257: Include soong namespaces for NXP keymint3 and weaver HALs",
-    "status": "NEW",
-    "created": "2026-07-05 12:53:48.000000000",
-    "updated": "2026-07-05 12:53:48.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 4,
-    "deletions": 0,
-    "total_comment_count": 0,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "aa6bc0545e69b099bc8d9ac92135b0cb62fc139e",
-    "_number": 493294,
-    "virtual_id_number": 493294,
-    "owner": {
-      "_account_id": 10067
-    },
-    "current_revision_number": 1,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "NEED"
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
-          },
-          {
-            "label": "CI",
-            "status": "MAY"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_codec2~469881",
-    "triplet_id": "LineageOS%2Fandroid_hardware_samsung_slsi-linaro_codec2~lineage-23.2~I79e3aa590c8a6225eb79749423bed1d7bb632753",
-    "project": "LineageOS/android_hardware_samsung_slsi-linaro_codec2",
-    "branch": "lineage-23.2",
-    "attention_set": {
-      "13648": {
-        "account": {
-          "_account_id": 13648
-        },
-        "last_update": "2026-07-04 14:07:56.000000000",
-        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
-        "reason_account": {
-          "_account_id": 35850
-        }
-      },
-      "24387": {
-        "account": {
-          "_account_id": 24387
-        },
-        "last_update": "2026-07-04 14:07:56.000000000",
-        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
-        "reason_account": {
-          "_account_id": 35850
-        }
-      },
-      "33569": {
-        "account": {
-          "_account_id": 33569
-        },
-        "last_update": "2026-01-25 21:40:22.000000000",
-        "reason": "<GERRIT_ACCOUNT_13648> replied on the change",
-        "reason_account": {
-          "_account_id": 13648
-        }
-      },
-      "34219": {
-        "account": {
-          "_account_id": 34219
-        },
-        "last_update": "2026-07-04 11:52:00.000000000",
-        "reason": "<GERRIT_ACCOUNT_24387> replied on the change",
-        "reason_account": {
-          "_account_id": 24387
-        }
-      }
-    },
-    "removed_from_attention_set": {
-      "35850": {
-        "account": {
-          "_account_id": 35850
-        },
-        "last_update": "2026-07-05 12:44:29.000000000",
-        "reason": "<GERRIT_ACCOUNT_35850> replied on the change",
-        "reason_account": {
-          "_account_id": 35850
-        }
-      }
-    },
-    "hashtags": [],
-    "change_id": "I79e3aa590c8a6225eb79749423bed1d7bb632753",
-    "subject": "codec2: Convert to AIDL",
-    "status": "NEW",
-    "created": "2026-01-25 20:28:10.000000000",
-    "updated": "2026-07-05 12:48:17.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 62,
-    "deletions": 75,
-    "total_comment_count": 15,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "1c24d1a7d6398560f1d436ba3a05b56e8d8b324c",
-    "_number": 469881,
-    "virtual_id_number": 469881,
-    "owner": {
-      "_account_id": 33569
-    },
-    "current_revision_number": 9,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "NEED"
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
-          },
-          {
-            "label": "CI",
-            "status": "MAY"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_hardware_sony~492957",
-    "triplet_id": "LineageOS%2Fandroid_hardware_sony~lineage-23.2~I455eff7643251973d84d38343ce33182613e02fe",
-    "project": "LineageOS/android_hardware_sony",
-    "branch": "lineage-23.2",
-    "topic": "CP2A",
-    "attention_set": {
-      "10067": {
-        "account": {
-          "_account_id": 10067
-        },
-        "last_update": "2026-07-05 12:40:34.000000000",
-        "reason": "Someone else replied on the change"
-      },
-      "14962": {
-        "account": {
-          "_account_id": 14962
-        },
-        "last_update": "2026-07-03 08:39:27.000000000",
-        "reason": "Someone else replied on the change"
-      }
-    },
-    "removed_from_attention_set": {
-      "33039": {
-        "account": {
-          "_account_id": 33039
-        },
-        "last_update": "2026-07-05 12:43:35.000000000",
-        "reason": "removed on reply"
-      }
-    },
-    "hashtags": [],
-    "change_id": "I455eff7643251973d84d38343ce33182613e02fe",
-    "subject": "sepolicy: Nuke sony_euiccmemoryreset_app sepolicy",
-    "status": "NEW",
-    "created": "2026-07-03 08:38:50.000000000",
-    "updated": "2026-07-05 12:43:35.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 2,
-    "deletions": 6,
-    "total_comment_count": 0,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "9cfd5dec85f77b23b6969c2abcc428265b3f2118",
-    "_number": 492957,
-    "virtual_id_number": 492957,
-    "owner": {
-      "_account_id": 14962
-    },
-    "current_revision_number": 3,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "NEED"
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
-          },
-          {
-            "label": "CI",
-            "status": "MAY",
-            "applied_by": {
-              "_account_id": 33039
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "LineageOS%2Fandroid_hardware_sony~492602",
-    "triplet_id": "LineageOS%2Fandroid_hardware_sony~lineage-23.2~I4457efe83f0880b4188b541c9cc7cecd7e1d7b66",
-    "project": "LineageOS/android_hardware_sony",
-    "branch": "lineage-23.2",
-    "topic": "CP2A",
-    "attention_set": {
-      "10067": {
-        "account": {
-          "_account_id": 10067
-        },
-        "last_update": "2026-07-05 12:40:35.000000000",
-        "reason": "Someone else replied on the change"
-      },
-      "20370": {
-        "account": {
-          "_account_id": 20370
-        },
-        "last_update": "2026-06-30 18:32:09.000000000",
-        "reason": "Someone else replied on the change"
-      }
-    },
-    "removed_from_attention_set": {
-      "33039": {
-        "account": {
-          "_account_id": 33039
-        },
-        "last_update": "2026-07-05 12:43:33.000000000",
-        "reason": "removed on reply"
-      }
-    },
-    "hashtags": [],
-    "change_id": "I4457efe83f0880b4188b541c9cc7cecd7e1d7b66",
-    "subject": "sepolicy: Rename 202404 compatibility mapping to 202504",
-    "status": "NEW",
-    "created": "2026-06-30 18:31:26.000000000",
-    "updated": "2026-07-05 12:43:33.000000000",
-    "submit_type": "REBASE_IF_NECESSARY",
-    "insertions": 0,
-    "deletions": 0,
-    "total_comment_count": 0,
-    "unresolved_comment_count": 0,
-    "has_review_started": true,
-    "meta_rev_id": "cbbd21957995fa1d9be959f3862da0afdc8c337a",
-    "_number": 492602,
-    "virtual_id_number": 492602,
-    "owner": {
-      "_account_id": 20370
-    },
-    "current_revision_number": 3,
-    "_more_changes": true,
-    "requirements": [],
-    "submit_records": [
-      {
-        "rule_name": "gerrit~DefaultSubmitRule",
-        "status": "NOT_READY",
-        "labels": [
-          {
-            "label": "Verified",
-            "status": "NEED"
-          },
-          {
-            "label": "Code-Review",
-            "status": "NEED"
           },
           {
             "label": "CI",
