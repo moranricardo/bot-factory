@@ -6,8 +6,8 @@ const WEBHOOK_URL = process.env.GOOGLE_WEBHOOK_URL;
 
 async function dispatchTelemetry() {
     if (!WEBHOOK_URL) {
-        console.error('[Google-Bridge] Error: GOOGLE_WEBHOOK_URL no configurada.');
-        process.exit(1);
+        console.warn('[Google-Bridge] Advertencia: GOOGLE_WEBHOOK_URL no configurada. Saltando ejecución.');
+        process.exit(0); // Cambiado a 0 para no romper el pipeline
     }
 
     try {
@@ -31,3 +31,4 @@ async function dispatchTelemetry() {
 }
 
 dispatchTelemetry();
+
