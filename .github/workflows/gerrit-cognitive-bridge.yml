@@ -31,8 +31,8 @@ jobs:
           from google import genai
 
           if 'GEMINI_API_KEY' not in os.environ or not os.environ['GEMINI_API_KEY']:
-              print('❌ Error: La clave secreta GEMINI_API_KEY llego vacia al contenedor.')
-              exit(1)
+              print('⚠️ Advertencia: GEMINI_API_KEY no configurada. Saltando análisis cognitivo.')
+              exit(0)
 
           client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
 
@@ -56,3 +56,4 @@ jobs:
           print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
           print(response.text)
           "
+
