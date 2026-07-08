@@ -30,7 +30,6 @@ function auditSystemPulse() {
         };
         fs.writeFileSync(STATE_FILE, JSON.stringify(initialState, null, 2));
         console.log('[Telemetry-Heart] state.json inicializado correctamente.');
- 0705b1498 (chore: enable automated RaPulse telemetry)
         return;
     }
 
