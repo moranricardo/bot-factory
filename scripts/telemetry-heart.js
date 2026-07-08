@@ -58,7 +58,7 @@ function auditSystemPulse() {
 auditTelemetry();
 
         const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
-        
+
         // Reglas de validación del estado del ecosistema
         state.metrics = state.metrics || { totalChecks: 0, failures: 0 };
         state.metrics.totalChecks += 1;
@@ -73,7 +73,7 @@ auditTelemetry();
 
         // Persistir la auditoría de métricas de forma limpia
         fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-        
+
     } catch (error) {
         console.error(`[Crítico] Fallo en el análisis de telemetría: ${error.message}`);
     }
