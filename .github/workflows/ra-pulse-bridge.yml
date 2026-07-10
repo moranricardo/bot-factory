@@ -24,11 +24,11 @@ with open('gerrit_data.json', 'r') as f:
     gerrit_data = json.load(f)
 contexto = json.dumps(gerrit_data[:2], indent=2)
 prompt = f'Analiza: {contexto}'
-print('🤖 Enviando contexto a Gemini...')
+print('Enviando contexto a Gemini...')
 response = client.models.generate_content(
     model='gemini-2.0-flash',
     contents=prompt,
 )
-print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
+print('--- [RA PULSE RESPUESTA COGNITIVA] ---')
 print(response.text)
 "
