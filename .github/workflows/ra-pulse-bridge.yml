@@ -35,7 +35,7 @@ jobs:
               print('⚠️ Advertencia: GEMINI_API_KEY no detectada. Análisis cognitivo omitido.')
               exit(0)
 
-          client = genai.Client()
+          client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
 
           json_path = 'data/gerrit_payload.json'
           if not os.path.exists(json_path):
