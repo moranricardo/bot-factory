@@ -1,0 +1,13 @@
+[1mdiff --git a/.github/workflows/ra-pulse-bridge.yml b/.github/workflows/ra-pulse-bridge.yml[m
+[1mindex 5c01bd116..0d1bab120 100644[m
+[1m--- a/.github/workflows/ra-pulse-bridge.yml[m
+[1m+++ b/.github/workflows/ra-pulse-bridge.yml[m
+[36m@@ -35,7 +35,7 @@[m [mjobs:[m
+               print('⚠️ Advertencia: GEMINI_API_KEY no detectada. Análisis cognitivo omitido.')[m
+               exit(0)[m
+ [m
+[31m-          client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))[m
+[32m+[m[32m          client = genai.Client()[m
+ [m
+           json_path = 'data/gerrit_payload.json'[m
+           if not os.path.exists(json_path):[m
