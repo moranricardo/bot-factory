@@ -1,28 +1,27 @@
-import os, json, sys
-from google import genai
+import os
+import json
+import sys
+from openai import AzureOpenAI
 
-api_key = os.environ.get('GEMINI_API_KEY')
-if not api_key:
-    print("Error: GEMINI_API_KEY no definida en el entorno.")
+endpoint = os.environ.get('AZURE_OPENAI_ENDPOINT')
+api_key = os.environ.get('AZURE_OPENAI_API_KEY')
+deployment = os.environ.get('AZURE_OPENAI_DEPLOYMENT')
+
+if not all([endpoint, api_key, deployment]):
+    print('Error: Variables de Azure no configuradas.')
     sys.exit(1)
 
-client = genai.Client(api_key=api_key)
+client = AzureOpenAI(azure_endpoint=endpoint, api_key=api_key, api_version='2024-05-01-preview')
 
 try:
     with open('gerrit_data.json', 'r') as f:
-        gerrit_data = json.load(f)
-    
-    contexto = json.dumps(gerrit_data[:2], indent=2)
-    prompt = f'Analiza: {contexto}'
-
-    print('--- [RA PULSE: ENVIANDO A GEMINI] ---')
-    response = client.models.generate_content(
-        model='gemini-2.0-flash',
-        contents=prompt,
+        data = json.load(f)
+    response = client.chat.completions.create(
+        model=deployment,
+        messages=[{'role': 'user', 'content': f'Analiza: {json.dumps(data[:2])}'}]
     )
-    print('--- [RA PULSE RESPUESTA COGNITIVA] ---')
-    print(response.text)
-
+    print('--- [RA PULSE: RESPUESTA AZURE] ---')
+    print(response.choices[0].message.content)
 except Exception as e:
-    print(f"Error durante la ejecución de la API: {e}")
+    print(f'Error en Azure: {e}')
     sys.exit(1)
