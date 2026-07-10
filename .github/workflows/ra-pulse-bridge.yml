@@ -23,7 +23,7 @@ client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
 with open('gerrit_data.json', 'r') as f:
     gerrit_data = json.load(f)
 contexto = json.dumps(gerrit_data[:2], indent=2)
-prompt = f'''Analiza: {contexto}'''
+prompt = f'Analiza: {contexto}'
 print('🤖 Enviando contexto a Gemini...')
 response = client.models.generate_content(
     model='gemini-2.0-flash',
