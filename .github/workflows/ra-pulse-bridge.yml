@@ -1,64 +1,34 @@
-name: "Ra Pulse: Puente Cognitivo en la Nube"
-
+name: Ra Pulse Bridge
 on:
   push:
-    branches: [ main ]
-
+    branches: [main]
 jobs:
   analyze-gerrit:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 1. Descargar el Repositorio
-        uses: actions/checkout@v7
-
-      - name: 2. Configurar Entorno de Python
-        uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: 3. Instalar Dependencias Actualizadas de Google
-        run: |
-          pip install google-genai
-
-      - name: 4. Interrogar Puente Cognitivo (Gemini)
+      - name: Run Bridge
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
+          pip install google-genai
           python -c "
-          import os
-          import json
-          from google import genai
-
-          # Validación silenciosa: si no hay clave, terminamos con éxito (0) para no romper el CI
-          if not os.environ.get('GEMINI_API_KEY'):
-              print('⚠️ Advertencia: GEMINI_API_KEY no detectada. Análisis cognitivo omitido.')
-              exit(0)
-
-          client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
-
-          json_path = 'data/gerrit_payload.json'
-          if not os.path.exists(json_path):
-              print(f'❌ Error: {json_path} no encontrado.')
-              exit(1)
-
-          with open(json_path, 'r') as f:
-              gerrit_data = json.load(f)
-
-          contexto = json.dumps(gerrit_data[:2], indent=2)
-          prompt = f'''Eres el núcleo cognitivo del proyecto Ra Pulse.
-          Analiza la siguiente telemetría de cambios extraídos del Gerrit de LineageOS.
-          Identifica parches críticos de seguridad o actualizaciones relevantes y genera una recomendación estructurada de ingeniería:
-
-          {contexto}
-          '''
-
-          print('🤖 Enviando contexto a Gemini...')
-          response = client.models.generate_content(
-              model='gemini-2.5-flash',
-              contents=prompt,
-          )
-          print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
-          print(response.text)
-          "
-
+import os, json
+from google import genai
+client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
+with open('gerrit_data.json', 'r') as f:
+    gerrit_data = json.load(f)
+contexto = json.dumps(gerrit_data[:2], indent=2)
+prompt = f'''Analiza: {contexto}'''
+print('🤖 Enviando contexto a Gemini...')
+response = client.models.generate_content(
+    model='gemini-2.0-flash',
+    contents=prompt,
+)
+print('\n--- [RA PULSE RESPUESTA COGNITIVA] ---')
+print(response.text)
+"
