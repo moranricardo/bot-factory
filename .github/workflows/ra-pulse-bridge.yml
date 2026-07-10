@@ -3,32 +3,8 @@ on:
   push:
     branches: [main]
 jobs:
-  analyze-gerrit:
+  test-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Run Bridge
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          pip install google-genai
-          python -c "
-import os, json
-from google import genai
-client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
-with open('gerrit_data.json', 'r') as f:
-    gerrit_data = json.load(f)
-contexto = json.dumps(gerrit_data[:2], indent=2)
-prompt = f'Analiza: {contexto}'
-print('Enviando contexto a Gemini...')
-response = client.models.generate_content(
-    model='gemini-2.0-flash',
-    contents=prompt,
-)
-print('--- [RA PULSE RESPUESTA COGNITIVA] ---')
-print(response.text)
-"
+      - name: Prueba simple
+        run: echo "El workflow arranca correctamente"
