@@ -1,4 +1,4 @@
-FROM node:26-bookworm@sha256:6000864d78f7f7e4f1a832c014fc7ff50dc95c60c665c7b722281e3dc5b58dfd
+FROM node:26-bookworm@sha256:219fc9da91e7f29a9f32290ff598cdf8886fd68f421ff515c8f93434da39a271
 # Configure default locale (important for chrome-headless-shell).
 ENV LANG=en_US.UTF-8 
 # UID of the non-root user 'pptruser'
