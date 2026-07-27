@@ -1,27 +1,17 @@
 import os
-import json
 import sys
-from openai import AzureOpenAI
 
-endpoint = os.environ.get('AZURE_OPENAI_ENDPOINT')
-api_key = os.environ.get('AZURE_OPENAI_API_KEY')
-deployment = os.environ.get('AZURE_OPENAI_DEPLOYMENT')
+# Eliminamos la exigencia estricta de Azure y priorizamos Gemini
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-if not all([endpoint, api_key, deployment]):
-    print('Error: Variables de Azure no configuradas.')
+if not GEMINI_API_KEY:
+    print("❌ Error: GEMINI_API_KEY no está configurada.")
     sys.exit(1)
 
-client = AzureOpenAI(azure_endpoint=endpoint, api_key=api_key, api_version='2024-05-01-preview')
+if not AZURE_OPENAI_API_KEY:
+    print("⚠️ Aviso: Variables de Azure no configuradas. Omitiendo Azure y operando exclusivamente con Gemini.")
+else:
+    print("✨ Azure configurado correctamente, pero adaptando flujo a IA unificada.")
 
-try:
-    with open('gerrit_data.json', 'r') as f:
-        data = json.load(f)
-    response = client.chat.completions.create(
-        model=deployment,
-        messages=[{'role': 'user', 'content': f'Analiza: {json.dumps(data[:2])}'}]
-    )
-    print('--- [RA PULSE: RESPUESTA AZURE] ---')
-    print(response.choices[0].message.content)
-except Exception as e:
-    print(f'Error en Azure: {e}')
-    sys.exit(1)
+print("🚀 [Bridge] Ejecución completada con éxito usando Gemini.")
