@@ -1,1 +1,22 @@
-{"status": "initialized", "last_heartbeat": "2026-07-07", "version": "1.0.0"}
+{
+  "lastPulse": "2026-07-21T04:13:02.378Z",
+  "status": "HEALTHY",
+  "nodes": {
+    "Telemetry-Heart": {
+      "status": "Detenido",
+      "last_update": "2026-07-26T19:41:43.237Z"
+    },
+    "Gerrit-Client": {
+      "status": "Activo",
+      "last_update": "2026-07-26T09:57:18.254Z",
+      "last_query": "status:open limit:3",
+      "results_count": 3,
+      "last_success": "2026-07-26T09:57:18.243Z"
+    }
+  },
+  "heartbeat": {
+    "status": "ONLINE",
+    "last_beat": "2026-07-26T19:41:31.533Z",
+    "uptime_seconds": 9842
+  }
+}

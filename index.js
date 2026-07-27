@@ -3,9 +3,10 @@ const fs = require('fs');
 
 async function run() {
   console.log("🚀 Iniciando el pulso del Ciclo de Ra...");
-  
+
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: '/data/data/com.termux/files/usr/bin/chromium-browser',
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
   });
 
@@ -14,7 +15,7 @@ async function run() {
     await page.goto('https://example.com');
     const title = await page.title();
     console.log(`🔗 Conexión exitosa a: ${title}`);
-    
+
     const state = { lastPulse: new Date().toISOString(), status: "HEALTHY" };
     fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
     console.log("📊 Telemetría actualizada en state.json");

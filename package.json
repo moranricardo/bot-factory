@@ -9,6 +9,7 @@
     "test": "echo \"✅ Mocks locales validados\""
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1"
+    "@google/generative-ai": "^0.24.1",
+    "puppeteer": "^25.3.0"
   }
 }
