@@ -1,63 +1,37 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: /
+  # 1. Actualizaciones de dependencias npm en la raíz
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: weekly
-      day: 'sunday'
-      time: '02:00'
-      timezone: Europe/Berlin
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+      timezone: "Europe/Berlin"
     ignore:
-      - dependency-name: devtools-protocol
-      - dependency-name: chromium-bidi
-      - dependency-name: '@types/node'
-      - dependency-name: '@angular-devkit/*'
+      - dependency-name: "devtools-protocol"
+      - dependency-name: "chromium-bidi"
+      - dependency-name: "@types/node"
+      - dependency-name: "@angular-devkit/*"
     groups:
       dependencies:
-        dependency-type: production
+        dependency-type: "production"
         patterns:
-          - '*'
+          - "*"
       dev-dependencies:
-        dependency-type: development
+        dependency-type: "development"
         patterns:
-          - '*'
-  - package-ecosystem: npm
-    directory: /website
+          - "*"
+
+  # 2. Actualizaciones para los flujos de trabajo de GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: weekly
-      day: 'sunday'
-      time: '03:00'
-      timezone: Europe/Berlin
+      interval: "weekly"
+      day: "sunday"
+      time: "04:00"
+      timezone: "Europe/Berlin"
     groups:
       all:
         patterns:
-          - '*'
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
-      day: 'sunday'
-      time: '04:00'
-      timezone: Europe/Berlin
-    groups:
-      all:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /docker
-    schedule:
-      interval: weekly
-      day: 'sunday'
-      time: '05:00'
-      timezone: Europe/Berlin
-    ignore:
-      - dependency-name: node
-        versions:
-          # Remove once NodeJS v24 is LTS
-          - '24'
-          - '23'
-          - '25'
-    groups:
-      all:
-        patterns:
-          - '*'
+          - "*"
