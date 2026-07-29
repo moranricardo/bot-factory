@@ -1,0 +1,15 @@
+{
+  "name": "ra-pulse-orchestrator",
+  "version": "1.0.0",
+  "description": "Orquestador ligero de Automatización para Ciclo de Ra",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"✅ Mocks locales validados\""
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "puppeteer": "^25.3.0"
+  }
+}

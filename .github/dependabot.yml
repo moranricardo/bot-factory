@@ -1,0 +1,37 @@
+version: 2
+updates:
+  # 1. Actualizaciones de dependencias npm en la raíz
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+      timezone: "Europe/Berlin"
+    ignore:
+      - dependency-name: "devtools-protocol"
+      - dependency-name: "chromium-bidi"
+      - dependency-name: "@types/node"
+      - dependency-name: "@angular-devkit/*"
+    groups:
+      dependencies:
+        dependency-type: "production"
+        patterns:
+          - "*"
+      dev-dependencies:
+        dependency-type: "development"
+        patterns:
+          - "*"
+
+  # 2. Actualizaciones para los flujos de trabajo de GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "04:00"
+      timezone: "Europe/Berlin"
+    groups:
+      all:
+        patterns:
+          - "*"
