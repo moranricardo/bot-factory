@@ -1,4 +1,5 @@
 #!/bin/bash  
+python3 core/validator.py || exit 1
 export PYTHONPATH=$PYTHONPATH:~/bot-factory/core  
 CMD=$1  
 ARG=$2  

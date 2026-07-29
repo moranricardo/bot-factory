@@ -1,7 +1,7 @@
 import os
 import sys
 
-# Diccionario de control anti-mutativo: Rutas y extensiones prohibidas en almacenamiento local (POD v1.0)
+# Diccionario de control anti-mutativo extendido (POD v1.0)
 MUTATION_DICTIONARY = {
     "directories": [
         os.path.expanduser('~/logs'),
@@ -9,7 +9,8 @@ MUTATION_DICTIONARY = {
         os.path.expanduser('~/temp-lib')
     ],
     "forbidden_extensions": [".log", ".json", ".tmp", ".mjs"],
-    "allowed_exceptions": ["README.md", "ra-pulse-bridge.yml"]
+    "allowed_exceptions": ["README.md", "ra-pulse-bridge.yml"],
+    "root_whitelist": ["update_workflow.sh", "export-ctx.sh", "gemini.sh", ".bashrc", ".gitconfig"]
 }
 
 def check_local_storage():
@@ -30,14 +31,16 @@ def check_local_storage():
 
     # 2. Escaneo de artefactos sueltos no permitidos en la raíz de trabajo (~/)
     home_dir = os.path.expanduser('~/')
-    for file_name in os.listdir(home_dir):
-        if os.path.isfile(os.path.join(home_dir, file_name)):
-            ext = os.path.splitext(file_name)[1]
-            if ext in MUTATION_DICTIONARY["forbidden_extensions"]:
-                # Si un archivo suelto intenta persistir datos locales fuera de git
-                if file_name not in ["update_workflow.sh", "export-ctx.sh", "gemini.sh"]:
-                    # Validar si el archivo es reciente o representa un estado intrusivo
-                    pass
+    try:
+        for file_name in os.listdir(home_dir):
+            file_path = os.path.join(home_dir, file_name)
+            if os.path.isfile(file_path):
+                ext = os.path.splitext(file_name)[1]
+                if ext in MUTATION_DICTIONARY["forbidden_extensions"]:
+                    if file_name not in MUTATION_DICTIONARY["root_whitelist"]:
+                        violations.append(file_path)
+    except Exception as e:
+        pass
 
     return violations
 
