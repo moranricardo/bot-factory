@@ -1,0 +1,38 @@
+#!/bin/bash  
+export PYTHONPATH=$PYTHONPATH:~/bot-factory/core  
+CMD=$1  
+ARG=$2  
+  
+case $CMD in  
+ status)  
+ python3 ~/bot-factory/core/validator.py && python3 ~/bot-factory/core/report.py || exit 1  
+ echo "--- PULSO DEL SISTEMA: NIVEL DE CONSCIENCIA ---"  
+ python3 ~/bot-factory/core/health.py  
+ ;;  
+ think)  
+ CONTEXT=$(~/bot-factory/ra status; ~/bot-factory/ra memory | tail -n 5)  
+ python3 -c "from bridge import consultar_ra; print(consultar_ra('$CONTEXT'))"  
+ ;;  
+ audit)  
+ python3 ~/bot-factory/core/analyzer.py  
+ ;;  
+ analyze)  
+ python3 ~/bot-factory/core/synthesizer.py  
+ ;;  
+ gerrit)  
+ python3 ~/bot-factory/core/ingestor.py  
+ ;;  
+ sync)  
+ python3 ~/bot-factory/core/sync.py $ARG  
+ ;;  
+ memory)  
+ python3 ~/bot-factory/core/memory.py  
+ ;;  
+ log)  
+ echo "[HISTORIAL DE DECISIONES DE MAAT]"  
+ cat ~/bot-factory/logs/activity.log | grep -v "[0-9]\{3,\}" 2>/dev/null || echo "No hay registros aún."  
+ ;;  
+ *)  
+ echo "Uso: ra {status|audit|analyze|gerrit|sync|memory|log|think}"  
+ ;;  
+esac
