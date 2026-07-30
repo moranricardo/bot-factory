@@ -1,0 +1,77 @@
+# 1. Obtener el SHA actual del archivo main.yml en la nube
+SHA=$(gh api repos/moranricardo/didactic-octo-chrome/contents/.github/workflows/main.yml --jq '.sha')
+
+# 2. Preparar el contenido codificado en base64
+CONTENT=$(base64 -w 0 << 'YML'
+name: El Toroide Adiamantado (Evolución 818 - Integrado)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    env:
+      NODE_ENV: production
+      GERRIT_HOST: ${{ secrets.GERRIT_HOST }}
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Verificar Estructura y Dependencias
+        run: |
+          node -v
+          npm -v
+          ls -la
+          ls -la src/ || true
+
+      - name: Instalación Segura
+        run: |
+          if [ -f package.json ]; then
+            npm install || npm install --legacy-peer-deps
+          else
+            npm init -y
+            npm pkg set type="module"
+          fi
+
+      - name: 📡 Ejecutar Motor de Red Ra Pulse
+        run: node src/index.js
+
+      - name: 💾 Persistir Estado
+        run: |
+          if [ -n "$(git status --porcelain state.json)" ]; then
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add state.json
+            git commit -m "chore: actualizar estado de auditoría [skip ci]"
+            git push
+          else
+            echo "No hay cambios en state.json, omitiendo commit."
+          fi
+YML
+)
+
+# 3. Enviar la actualización a la API de GitHub incluyendo el SHA
+gh api repos/moranricardo/didactic-octo-chrome/contents/.github/workflows/main.yml \
+  --method PUT \
+  -f message="fix: ajustar pasos de preparacion, dependencias y SHA en workflow" \
+  -f content="$CONTENT" \
+  -f sha="$SHA" \
+  --jq '.commit.sha'
+
+echo "¡Workflow actualizado con éxito!"
