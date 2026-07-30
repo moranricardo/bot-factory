@@ -1,37 +1,16 @@
 version: 2
 updates:
-  # 1. Actualizaciones de dependencias npm en la raíz
-  - package-ecosystem: "npm"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "sunday"
-      time: "02:00"
-      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 5
     ignore:
-      - dependency-name: "devtools-protocol"
-      - dependency-name: "chromium-bidi"
-      - dependency-name: "@types/node"
-      - dependency-name: "@angular-devkit/*"
-    groups:
-      dependencies:
-        dependency-type: "production"
-        patterns:
-          - "*"
-      dev-dependencies:
-        dependency-type: "development"
-        patterns:
-          - "*"
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
 
-  # 2. Actualizaciones para los flujos de trabajo de GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "sunday"
-      time: "04:00"
-      timezone: "Europe/Berlin"
-    groups:
-      all:
-        patterns:
-          - "*"
+    open-pull-requests-limit: 3
