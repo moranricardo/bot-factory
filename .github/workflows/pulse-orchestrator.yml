@@ -1,28 +1,19 @@
-name: Ra Pulse Orchestrator
-
+name: Pulse Orchestrator
 on:
-  schedule:
-    - cron: '0 * * * *'
   workflow_dispatch:
-
 jobs:
-  ra-pulse-orchestrator:
+  orchestrate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
-
+          node-version: '20'
       - name: Purge Legacy Environment
         run: |
-          # Elimina archivos de telemetría corruptos y fuerza checkout limpio
           rm -f scripts/telemetry-heart.js
           git checkout scripts/telemetry-heart.js
-
       - name: Execute Pipeline
         env:
           GOOGLE_WEBHOOK_URL: ${{ secrets.GOOGLE_WEBHOOK_URL }}
@@ -30,4 +21,3 @@ jobs:
           node scripts/gerrit-client.js
           node scripts/telemetry-heart.js
           node scripts/google-bridge.js
-
