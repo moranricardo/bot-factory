@@ -1,34 +1,29 @@
-const { scrape } = require('./modules/scraping.js');
-
-async function vorticePrincipal() {
-    console.log("[VÓRTICE 818] Iniciando escaneo de mercados...");
-    const datos = await scrape();
-    console.log("Titulares encontrados:", datos);
+/**
+ * Módulo de scraping / obtención de datos ligero.
+ * Utiliza fetch nativo de Node.js.
+ */
+async function scrape(url = 'https://www.chromium.org') {
+  try {
+    console.log(`🌍 Obteniendo datos de: ${url}`);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const text = await response.text();
+    // Extracción básica de título vía Regex
+    const match = text.match(/<title>(.*?)<\/title>/i);
+    const title = match ? match[1] : "Sin título";
+    return title;
+  } catch (error) {
+    console.error("❌ Error en el scraping ligero:", error.message);
+    return null;
+  }
 }
 
-vorticePrincipal();
+async function vorticePrincipal() {
+  console.log("[VÓRTICE 818] Iniciando escaneo de mercados...");
+  const datos = await scrape();
+  console.log("Titulares encontrados:", datos);
+}
 
-import puppeteer from 'puppeteer';
-
-1. USA 'export' al inicio (ESTO ES LO QUE BUSCA INDEX.JS)
-export async function scrape() {
-    console.log("🚀 Lanzando motor Chromium...");
-    
-    const browser = await puppeteer.launch({
-
-        executablePath: '/usr/bin/chromium',
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
-    try {
-        const page = await browser.newPage();
-        console.log("🌍 Navegando...");
-        await page.goto('https://www.chromium.org', { waitUntil: 'networkidle2' });
-        
-        const title = await page.evaluate(() => {
-            return document.querySelector('h1')?.innerText || "Sin título";
-        });
-
-        return title;
-    } catch (error) {
-        console.error("❌ Error en el scraping:",
-module.exports = { scrape };
+module.exports = { scrape, vorticePrincipal };
