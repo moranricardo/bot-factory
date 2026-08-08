@@ -1,19 +1,19 @@
 name: Pulse Orchestrator
+
 on:
   workflow_dispatch:
+
 jobs:
   orchestrate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
+
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Purge Legacy Environment
-        run: |
-          rm -f scripts/telemetry-heart.js
-          git checkout scripts/telemetry-heart.js
+
       - name: Execute Pipeline
         env:
           GOOGLE_WEBHOOK_URL: ${{ secrets.GOOGLE_WEBHOOK_URL }}
