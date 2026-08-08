@@ -1,12 +1,25 @@
-# 🪐 Ciclo de Ra - Pulse Orchestrator
+# ⚡ Bot Factory — Ra Pulse Core
 
-Automatización horaria ejecutada mediante GitHub Actions para el monitoreo y actualización del pulso del sistema.
+Sistema de automatización y puente cognitivo optimizado para Termux.
 
-## 🚀 Arquitectura Ligera
-Este repositorio ha sido optimizado y purgado para ejecuciones rápidas en contenedores limpios de Ubuntu:
-* **Entorno:** Node.js v24 nativo.
-* **Motor:** Puppeteer (Headless Chrome con dependencias del sistema dinámicas).
-* **Frecuencia:** Automatizado mediante tareas `cron` cada hora.
+## 📐 Arquitectura del Monorepo
 
-## 📊 Telemetría
-El estado del sistema se persiste automáticamente en el archivo `state.json`.
+- config/: Configuración central (state.json)
+- core/: Núcleo operativo y puente cognitivo (bridge.py, memory.py, health.py)
+- knowledge/: Base conceptual y axiomas
+- knowledge_graph/: Manifests e integridad del sistema
+- modules/: Módulos JS ligeros (scraping.js)
+- src/: Agentes especializados (bot_auditor.py)
+- labs/: Laboratorio de pruebas
+- guardian.py: Daemon de supervisión
+- agente_custom.py: Ejecutor de comandos
+- index.js: Entrada principal Node.js
+
+## 📜 Axiomas Fundamentales
+1. AXIOMA_01: El orden precede al conocimiento.
+2. AXIOMA_02: La validación (Maat) es la única defensa contra el caos.
+3. AXIOMA_03: El sistema debe ser capaz de auditar su propia estructura.
+
+## 🚀 Inicio Rápido
+- Node.js: `node index.js`
+- Python: `python core/bridge.py`
