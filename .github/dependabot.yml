@@ -1,5 +1,6 @@
 version: 2
 updates:
+  # Actualizaciones para librerías de Python
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
@@ -9,8 +10,19 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
 
+  # Actualizaciones para las acciones de GitHub Workflows
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 3
+
+  # Actualizaciones para paquetes de Node.js / npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
