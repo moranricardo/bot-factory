@@ -1,39 +1,39 @@
-name: Reporte de Error (Bug)
-description: Notifica un fallo o comportamiento inesperado en bot-factory
+name: Reportar un Error (Bug)
+description: Informa sobre un fallo en los flujos o automatizaciones.
 title: '[Bug]: '
+type: 'Bug'
 body:
   - type: markdown
     attributes:
       value: >
         ### ¡Gracias por reportar este problema!
-        Asegúrate de proporcionar la información necesaria para reproducir el fallo.
-  - id: descripcion
+        Describe el fallo detectado en los workflows o scripts del repositorio.
+  - id: mvce
     type: textarea
     attributes:
-      label: Descripción del problema
-      description: Describe brevemente qué sucedió y qué esperabas que pasara.
-      placeholder: Al ejecutar el script, el bot responde con...
-    validations:
-      required: true
-  - id: pasos
-    type: textarea
-    attributes:
-      label: Pasos para reproducir
-      description: Comandos o código utilizado.
+      label: Pasos para reproducir o Log del error
+      description: Pega aquí los logs de GitHub Actions o describe cómo se activa el fallo.
       placeholder: |
-        1. Ejecutar python bridge.py
-        2. ...
+        - Acción ejecutada: ...
+        - Error recibido en los logs: ...
     validations:
       required: true
-  - id: entorno
+  - id: expectation
+    type: textarea
+    attributes:
+      label: Resultado esperado
+      placeholder: |
+        El job de GitHub Actions debió finalizar en verde exitosamente...
+    validations:
+      required: true
+  - id: environment
     type: dropdown
     attributes:
       label: Entorno de ejecución
-      description: ¿Dónde ocurrió el error?
+      description: ¿Dónde se produjo la falla?
       options:
-        - Termux
-        - Codespaces / Workspace
-        - GitHub Actions
-        - Servidor Externo
+        - GitHub Actions Runner (Ubuntu / CI-CD)
+        - Servidor / API remota
+        - Otro
     validations:
       required: true
