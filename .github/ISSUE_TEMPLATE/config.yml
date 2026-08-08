@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: General Puppeteer questions
-    url: https://stackoverflow.com/questions/tagged/puppeteer
-    about: For general technical questions or “how to” guidance, please search StackOverflow for questions tagged “puppeteer” or create a new post.
+  - name: Preguntas sobre bot-factory
+    url: https://github.com/moranricardo/bot-factory/discussions
+    about: Para dudas generales o guía de uso, por favor abre un hilo en la sección de Discusiones del proyecto.
