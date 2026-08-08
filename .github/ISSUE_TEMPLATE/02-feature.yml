@@ -1,17 +1,25 @@
-name: Feature
-description: File a feature request
+name: Solicitud de Funcionalidad (Feature)
+description: Sugiere una nueva idea o mejora para bot-factory
 title: '[Feature]: '
-type: 'Feature'
 body:
   - type: markdown
     attributes:
       value: |
-        ### Thanks for taking the time to fill out a feature request!
-        **Before filling out this report**, please check [existing feature requests](https://github.com/puppeteer/puppeteer/issues?q=is%3Aissue%20type%3AFeature) and see if your feature has already been proposed.
+        ### ¡Gracias por sugerir una mejora para bot-factory!
+        Por favor, detalla la propuesta para entender cómo beneficiaría al proyecto.
   - type: textarea
-    id: summary
+    id: resumen
     attributes:
-      label: Feature description
-      description: Please describe your feature request with as many details as possible.
+      label: Descripción de la funcionalidad
+      description: Explica detalladamente qué te gustaría que haga el bot o qué mejora propones.
+      placeholder: Me gustaría que el bot pudiera...
     validations:
       required: true
+  - type: textarea
+    id: caso_de_uso
+    attributes:
+      label: Caso de uso / Motivación
+      description: ¿Qué problema resuelve esta nueva función o por qué sería útil?
+      placeholder: Esto facilitaría...
+    validations:
+      required: false
