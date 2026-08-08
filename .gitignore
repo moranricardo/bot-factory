@@ -3,3 +3,6 @@ scripts/tmp.json
 .env
 state.json
 logs/
+__pycache__/
+venv/
+*.txt
