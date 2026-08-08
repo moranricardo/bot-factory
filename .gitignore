@@ -1,9 +1,15 @@
+# Dependencias y entornos
 node_modules/
+venv/
+__pycache__/
+
+# Logs y estado dinámico
+logs/
+*.log
+logs_guardian.txt
 scripts/tmp.json
 .env
-state.json
-logs/
-__pycache__/
-venv/
-*.txt
-logs_guardian.txt
+
+# Archivos de sistema / IDE
+.DS_Store
+.vscode/
