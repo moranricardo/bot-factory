@@ -1,0 +1,24 @@
+name: Ra Pulse Automation
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Se ejecuta automáticamente cada 6 horas
+  workflow_dispatch:          # Permite dispararlo manualmente desde GitHub
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Ejecutar Diagnóstico de Salud
+        run: python core/health.py
+
+      - name: Ejecutar Auditor de Seguridad (SAST)
+        run: python core/security_sast.py
