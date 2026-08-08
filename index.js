@@ -1,30 +1,26 @@
-const puppeteer = require('puppeteer');
+const { scrape } = require('./modules/scraping.js');
 const fs = require('fs');
+const path = require('path');
 
 async function run() {
   console.log("🚀 Iniciando el pulso del Ciclo de Ra...");
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    executablePath: '/data/data/com.termux/files/usr/bin/chromium-browser',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
-  });
-
   try {
-    const page = await browser.newPage();
-    await page.goto('https://example.com');
-    const title = await page.title();
-    console.log(`🔗 Conexión exitosa a: ${title}`);
+    const titulo = await scrape('https://example.com');
+    console.log(`🔗 Conexión exitosa. Título obtenido: ${titulo}`);
 
-    const state = { lastPulse: new Date().toISOString(), status: "HEALTHY" };
-    fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
-    console.log("📊 Telemetría actualizada en state.json");
+    const configPath = path.join(__dirname, 'config', 'state.json');
+    const state = {
+      lastPulse: new Date().toISOString(),
+      status: "HEALTHY",
+      lastScrapedTitle: titulo
+    };
+
+    fs.writeFileSync(configPath, JSON.stringify(state, null, 2));
+    console.log("📊 Telemetría actualizada en config/state.json");
 
   } catch (error) {
-    console.error("❌ Error en el ciclo:", error);
-  } finally {
-    await browser.close();
-    console.log("🔒 Navegador cerrado de forma segura.");
+    console.error("❌ Error en el ciclo:", error.message);
   }
 }
 
