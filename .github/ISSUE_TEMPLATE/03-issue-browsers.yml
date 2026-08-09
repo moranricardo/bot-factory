@@ -1,0 +1,29 @@
+name: Tarea de Mantenimiento (Task)
+description: Registra una tarea técnica, refactorización o mantenimiento pendiente.
+title: '[Task]: '
+type: 'Task'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Registro de Tarea / Mantenimiento
+        Usa esta plantilla para dar seguimiento a tareas internas de infraestructura o código.
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción de la tarea
+      description: ¿Qué trabajo técnico o ajuste se debe realizar?
+      placeholder: |
+        - Refactorizar el script de Python...
+        - Actualizar los secrets de GitHub Actions...
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Criterios de aceptación / Subtareas
+      placeholder: |
+        - [ ] Modificar código
+        - [ ] Probar en workflow
+    validations:
+      required: false
