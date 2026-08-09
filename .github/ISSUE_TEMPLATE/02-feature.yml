@@ -1,25 +1,28 @@
-name: Solicitud de Funcionalidad (Feature)
-description: Sugiere una nueva idea o mejora para bot-factory
+name: Nueva Función (Feature Request)
+description: Sugiere una nueva idea, automatización o mejora para el proyecto.
 title: '[Feature]: '
+type: 'Feature'
 body:
   - type: markdown
     attributes:
       value: |
-        ### ¡Gracias por sugerir una mejora para bot-factory!
-        Por favor, detalla la propuesta para entender cómo beneficiaría al proyecto.
+        ### ¡Gracias por sugerir una mejora o nueva función!
+        Describe la idea o automatización que te gustaría incorporar a los workflows o scripts.
   - type: textarea
-    id: resumen
+    id: summary
     attributes:
-      label: Descripción de la funcionalidad
-      description: Explica detalladamente qué te gustaría que haga el bot o qué mejora propones.
-      placeholder: Me gustaría que el bot pudiera...
+      label: Descripción de la función
+      description: Explica detalladamente qué debería hacer esta nueva característica o mejora.
+      placeholder: |
+        Me gustaría agregar un nuevo workflow/script que se encargue de...
     validations:
       required: true
   - type: textarea
-    id: caso_de_uso
+    id: use-case
     attributes:
-      label: Caso de uso / Motivación
-      description: ¿Qué problema resuelve esta nueva función o por qué sería útil?
-      placeholder: Esto facilitaría...
+      label: Caso de uso / Beneficio
+      description: ¿Qué problema resuelve o qué proceso automatiza esta propuesta?
+      placeholder: |
+        Esto ayudará a automatizar el proceso de...
     validations:
       required: false
